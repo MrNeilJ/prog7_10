@@ -16,7 +16,7 @@ private:
 public:
     void storeInfo(int p, string d, int oH, double cost);       // Prototype
 
-    itn getPartNum() const          // The get functions have all been made
+    int getPartNum() const          // The get functions have all been made
     {                               // const functions. This ensure they
         return partNum;             // cannot alter any class member data
     }
@@ -108,8 +108,8 @@ InventoryItem createItem()
  void showValues(const InventoryItem &item)
 {
     cout << fixed << showpoint << setprecision(2) << endl;
-    cout << "Part Number  :" << item.getPartNum() << endl;
-    cout << "Description  :" << item.getDescription() << endl;
-    cout << "Units On Hand:" << item.getOnHand() << endl;
-    cout << "Price        :" << item.getPrice() << endl;
+    cout << "Part Number   : " << item.getPartNum() << endl;
+    cout << "Description   : " << item.getDescription() << endl;
+    cout << "Units On Hand : " << item.getOnHand() << endl;
+    cout << "Price         : " << item.getPrice() << endl;
 }
