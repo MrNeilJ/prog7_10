@@ -37,4 +37,26 @@ public:
     }
 };
 
-//
+// Implementation code for InventoryItem class function storeInfo
+void InventoryItem::storeInfo(int p, string d, int oH, double cost)
+{
+    partNum = p;
+    description = d;
+    onHand = oH;
+    price = cost;
+}
+
+// Function prototypes for client program
+InventoryItem createItem();                 // Returns an InventoryItem object
+void showValues(const InventoryItem&);      // Receives a reference to an
+                                            // Inventory Item object
+
+/******************************************
+*               main                      *
+******************************************/
+int main()
+{
+    InventoryItem part = createItem();
+    showValues(part);
+    return 0;
+}
