@@ -93,3 +93,23 @@ InventoryItem createItem()
     tempItem.storeInfo(partNum, description, qty, price);
     return tempItem;
 }
+
+/********************************************
+ *          showValues                      *
+ *   This function displays the member data *
+ *   in the InventoryItem object passed to  *
+ *   it. Because it was passed as a constant*
+ *   reference, showValues accesses the     *
+ *   original object, not a copy, but it    *
+ *   can only call member functions declared*
+ *   to be const. This prevents it from     *
+ *   calling any mutator functions          *
+ ********************************************/
+ void showValues(const InventoryItem &item)
+{
+    cout << fixed << showpoint << setprecision(2) << endl;
+    cout << "Part Number  :" << item.getPartNum() << endl;
+    cout << "Description  :" << item.getDescription() << endl;
+    cout << "Units On Hand:" << item.getOnHand() << endl;
+    cout << "Price        :" << item.getPrice() << endl;
+}
