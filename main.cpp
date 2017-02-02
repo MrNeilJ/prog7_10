@@ -66,6 +66,7 @@ int main()
 *   This function stores user input data *
 *   in the members of a locally define   *
 *   InventoryItem object, then returns it*
+ *                                       *
 *****************************************/
 
 InventoryItem createItem()
